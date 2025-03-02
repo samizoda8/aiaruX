@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "type": 301 },
+    { "source": "/about.html", "destination": "/about", "type": 301 },
+    { "source": "/bc-1cohort.html", "destination": "/bc-first-cohort", "type": 301 },
+    { "source": "/bc-first-cohort.html", "destination": "/bc-first-cohort", "type": 301 }
+  ],
+  "cleanUrls": true,
+  "routes": {
+    "/": "index.html",
+    "/about": "about.html",
+    "/bc-first-cohort": "bc-first-cohort.html",
+    "/404": "404.html",
+    "/**": "/404.html"
+  }
+}

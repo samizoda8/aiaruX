@@ -1,0 +1,2400 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AI Academy</title>
+    <meta name="description" content="aiacademy - Online Courses & Education Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/flaticon-skillgro.css">
+    <link rel="stylesheet" href="../assets/css/flaticon-skillgro-new.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/default-icons.css">
+    <link rel="stylesheet" href="../assets/css/select2.min.css">
+    <link rel="stylesheet" href="../assets/css/odometer.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/plyr.css">
+    <link rel="stylesheet" href="../assets/css/spacing.css">
+    <link rel="stylesheet" href="../assets/css/tg-cursor.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+
+       <!--Preloader-->
+       <div id="preloader">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class="loader-icon"><img src="../assets/img/logo/preloader.png" alt="Preloader"></div>
+            </div>
+        </div>
+    </div>
+    <!--Preloader-end -->
+
+    <!-- Scroll-top -->
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="tg-flaticon-arrowhead-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+    <!-- header-area -->
+    <header>
+        <div class="tg-header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="tg-header__top-info list-wrap">
+                            <li><img src="../assets/img/icons/map_marker.svg" width="16px" alt="Icon"> 
+                                <span><small>21 Sh. Shotemur Street, Dushanbe</small></span>
+                            </li>
+                            <li><img src="../assets/img/icons/envelope.svg" width="18px" alt="Icon"> 
+                                <a href="mailto:ai.academy@zypl.ai"><small>ai.academy@zypl.ai</small></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tg-header__top-right">
+                            <div class="tg-header__phone">
+                                <img src="../assets/img/icons/phone.svg" width="16px" alt="Icon">
+                                <small>Call us:</small> 
+                                <a href="tel:992995550032"><small>+992 99 555 00 32</small></a>
+                            </div>
+                            <ul class="tg-header__top-social list-wrap">
+                                <li><small>Follow us:</small></li>
+                                <li><a href="https://www.instagram.com/aiacademy.tj"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571167420750"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/aiacademytj/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://t.me/aiacademytj"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            async function updateLocationInfo() {
+                try {
+                    let response = await fetch('https://ipapi.co/json/');
+                    let data = await response.json();
+                    let city = data.city; // Detecting the user's city
+        
+                    let addressElement = document.querySelector(".tg-header__top-info li span small");
+                    let phoneElement = document.querySelector(".tg-header__phone a small");
+                    let phoneLink = document.querySelector(".tg-header__phone a");
+        
+                    if (city === "Khujand") {
+                        addressElement.textContent = "1A Tiroz Street, Khujand";
+                        phoneElement.textContent = "+992 92 848 90 10";
+                        phoneLink.href = "tel:992928489010";
+                    } else {
+                        addressElement.textContent = "21 Sh. Shotemur Street, Dushanbe";
+                        phoneElement.textContent = "+992 99 555 00 32";
+                        phoneLink.href = "tel:992995550032";
+                    }
+                } catch (error) {
+                    console.error("Error detecting location:", error);
+                }
+            }
+        
+            updateLocationInfo();
+        </script>
+        
+        <div id="header-fixed-height"></div>
+        <div id="sticky-header" class="tg-header__area tg-header__style-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tgmenu__wrap">
+                            <nav class="tgmenu__nav">
+                                <div class="logo">
+                                    <a href="index.html"><img src="../assets/img/logo/logo.png" width="120" alt="Logo"></a>
+                                </div>
+                                <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
+                                    <ul class="navigation">
+                                        <li class="menu-item active"><a href="#">Home</a>
+                                        </li>
+                                        
+                                        <li class="menu-item-has-children"><a href="courses.html">Courses</a>
+                                            <ul class="sub-menu mega-menu">
+                                                <li>
+                                                    <ul class="list-wrap mega-sub-menu">
+                                                        <li>
+                                                            <a href="#" style="text-transform: none;"><b>Main Courses</b></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dataanalyst.html"><small>Data Analyst</small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dsjunior.html"><small>Data Scientist Junior</small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dsadvanced.html"><small>Data Scientist Advanced</small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-mlops.html"><small>MLOps</small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dataanalyst02.html" style="text-transform: none;"><small>Data Analyst <b>in Khujand</b></small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dsjunior02.html" style="text-transform: none;"><small>Data Scientist Junior <b>in Khujand</b></small></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul class="list-wrap mega-sub-menu">
+                                                        <li>
+                                                            <a href="#" style="text-transform: none;"><b>Corporate Courses</b></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-dabasics.html"><small>Data Analytics Basics</small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-daadvanced.html"><small>Data Analytics Advanced</small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-gptpe.html"><small>GPT Prompt Engineer</small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    
+                                                </li>
+                                                <li style="border-left: 1px solid #D6D6D6;">
+                                                    <ul class="list-wrap mega-sub-menu">
+                                                        <li>
+                                                            <a href="#" style="text-transform: none;"><b>Additional Courses</b></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-basiccourse.html"><small>Basic Course</small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-aipm.html"><small>AI Product Manager</small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-math4ds.html"><small>Math for DS</small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-basiccourse02.html" style="text-transform: none;"><small>Basic Course <b>in Khujand</b></small></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="courses-math4ds02.html" style="text-transform: none;"><small>Math for DS <b>in Khujand</b></small><span class="tg-badge">New</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>                                                    
+                                            </ul>
+                                            
+                                        </li>
+                                        <li class="menu-item"><a href="about.html">About Us</a>
+                                        </li>
+                                        <!--<li class="menu-item"><a href="index.html#bootcamp">AI Bootcamp</a>
+                                        </li>-->
+                                        <li class="menu-item"><a style="text-transform: none;" href="#schedule">Upcoming Courses</a>
+                                        </li>
+                                        <li class="menu-item"><a href="#testimonials">Reviews</a>
+                                        </li>
+                                        <li class="menu-item"><a href="blog.html">News</a>
+                                        </li>
+
+                                        
+                                    </ul>
+                                </div>
+                                
+                                <div class="tgmenu__action tgmenu__action-three">
+                                    <ul class="list-wrap">
+                                        <li class="header-search">
+                                            <a href="javascript:void(0)" class="search-open-btn">
+                                                <i class="flaticon-search"></i>
+                                            </a>
+                                        </li>
+                                        <li class="language-switcher">
+                                            <div class="selected-lang">
+                                                <img src="../assets/img/icons/english.png" width="35px" alt="english">
+                                            </div>
+                                            <ul class="language-dropdown">
+                                                <li>
+                                                </li>
+                                                <li>
+                                                    <a href="tj/index.html">
+                                                        <span>Тоҷикӣ</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../index.html">
+                                                        <span>Русский</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <style>
+                                            .language-switcher {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+
+.language-switcher .selected-lang {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.language-switcher .selected-lang img {
+    width: 25px;
+    height: auto;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 110px;
+    padding: 5px 0;
+}
+
+.language-dropdown li {
+    list-style: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+    gap: 10px
+}
+
+.language-dropdown li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.language-dropdown li img {
+    width: 22px;
+    height: auto;
+}
+
+.language-dropdown li:hover {
+    background: #f0f0f0;
+}
+
+/* Показываем меню при наведении */
+.language-switcher:hover .language-dropdown {
+    display: block;
+}
+
+                                        </style>                                       
+                                        <li class="header-btn">
+                                            <a style="text-transform: none;" href="https://taplink.cc/aic.tj" class="btn arrow-btn">
+                                                Get started <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
+                            </nav>
+                        </div>
+                        <!-- Mobile Menu  -->
+                        <div class="tgmobile__menu">
+                            <nav class="tgmobile__menu-box">
+                                <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
+                                <div class="nav-logo">
+                                    <a href="index.html"><img src="../assets/img/logo/logo.png" alt="Logo"></a>
+                                </div>
+                                <div class="tgmobile__search">
+                                    <form id="globalSearchForm">
+                                        <input type="text" id="searchInput" placeholder="Search here...">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>                                
+                                <div class="tgmobile__menu-outer">
+                                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                </div>
+                                <div class="social-links">
+                                    <ul class="list-wrap">
+                                            <li><a href="https://www.instagram.com/aiacademy.tj"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=61571167420750"><i class="fab fa-facebook-f"></i></a></li>
+                                    <!--<li><a href="https://www.youtube.com/@zypl_ai"><i class="fab fa-youtube"></i></a></li>-->
+                                    <li><a href="https://www.linkedin.com/company/aiacademytj/"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://t.me/aiacademytj"><i class="fab fa-telegram"></i></a></li>
+
+
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="tgmobile__menu-backdrop"></div>
+                        <!-- End Mobile Menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- header-search -->
+        <div class="search__popup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="search__wrapper">
+                            <div class="search__close">
+                                <button type="button" class="search-close-btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="search__form">
+                                <form id="globalSearchForm">
+                                    <div class="search__input">
+                                        <input type="text" id="searchInput" placeholder="Enter your query here....">
+                                        <span class="search-focus-border"></span>
+                                        <button type="submit">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const searchForms = document.querySelectorAll("#globalSearchForm");
+                                
+                                    searchForms.forEach(form => {
+                                        form.addEventListener("submit", function(event) {
+                                            event.preventDefault();
+                                            let searchQuery = form.querySelector("#searchInput").value.trim();
+                                            if (searchQuery) {
+                                                window.location.href = `search.html?search=${encodeURIComponent(searchQuery)}`;
+                                            }
+                                        });
+                                    });
+                                });
+                                </script>
+                                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-popup-overlay"></div>
+        <!-- header-search-end -->
+
+    </header>
+    <!-- header-area-end -->
+
+
+    <!-- main-area -->
+    <main class="main-area fix">
+
+<!-- banner-area -->
+<section class="banner-area-two banner-bg-two tg-motion-effects" data-background="../assets/img/banner/banner_bg02.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6">
+                <div class="banner__content-two">
+                    <h3 class="title" data-aos="fade-right" data-aos-delay="400">
+                        Welcome to the <br>
+                        <span class="position-relative">
+                            <svg x="0px" y="0px" preserveAspectRatio="none" viewBox="0 0 209 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.74438 7.70565C69.7006 -1.18799 136.097 -2.38304 203.934 4.1205C207.178 4.48495 209.422 7.14626 208.933 10.0534C206.793 23.6481 205.415 36.5704 204.801 48.8204C204.756 51.3291 202.246 53.5582 199.213 53.7955C136.093 59.7623 74.1922 60.5985 13.5091 56.3043C10.5653 56.0924 7.84371 53.7277 7.42158 51.0325C5.20725 38.2627 2.76333 25.6511 0.0898448 13.1978C-0.465589 10.5873 1.61173 8.1379 4.73327 7.70565" fill="currentcolor" />
+                            </svg>
+                             AI
+                        </span>
+                        Academy<br> Your Path to the Future of Technology!
+                    </h3>
+                    <div class="banner__btn-two" data-aos="fade-right" data-aos-delay="600">
+                        <a style="text-transform: none;" href="#courses" class="btn arrow-btn">Start Now <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                       <!-- <a href="https://www.youtube.com/watch?v=DQyle-GJE3E" class="play-btn popup-video"><i class="fas fa-play"></i> Watch <br> Our Video</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-8">
+                <div class="banner__images-two tg-svg">
+                    <img src="../assets/img/banner/h2_banner_img.png" alt="img" class="main-img">
+                    <div class="shape big-shape" data-aos="fade-up" data-aos-delay="600">
+                        <img src="../assets/img/banner/h2_banner_shape01.svg" alt="shape" class="injectable tg-motion-effects1">
+                    </div>
+                    <span class="svg-icon" id="banner-svg" data-svg-icon="../assets/img/banner/h2_banner_shape02.svg"></span>
+                   <!-- <div class="about__enrolled" data-aos="fade-right" data-aos-delay="200">
+                        <p class="title"><span></span></p>
+                        <img src="../assets/img/others/student_grp.png" alt="img">
+                    </div>
+                    <div class="banner__student" data-aos="fade-left" data-aos-delay="200">
+                        <div class="icon">
+                            <img src="../assets/img/banner/h2_banner_icon.svg" alt="img" class="injectable">
+                        <style>
+                            
+                        </style>
+                        </div>
+                        <div class="content">
+                            <span>Total Students</span>
+                            <h4 class="title">15K</h4>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="../assets/img/banner/h2_banner_shape03.svg" alt="shape" class="line-shape-two" data-aos="fade-right"
+    data-aos-delay="1600">
+</section>
+<!-- banner-area-end -->
+
+<style>
+.banner-area-two .banner__images-two {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+/* big shape - самый нижний слой */
+.banner-area-two .big-shape {
+position: absolute;
+z-index: 1;
+width: 100%;
+max-width: 90%;
+bottom: -20px;
+left: 5%;
+}
+
+
+.banner-area-two .tg-motion-effects1 {
+position: relative;
+left: -8%;
+}
+
+/* Фотография - поверх всех слоев */
+.banner-area-two .main-img {
+position: relative;
+z-index: 4;
+width: 92%;
+max-width: none;
+height: auto;
+transform: scale(1.2) translateX(-5%);
+}
+.banner-area-two .svg-icon {
+position: absolute;
+z-index: 3; /* Выше главного изображения */
+width: 15%; /* Стандартный размер */
+max-width: 120px;
+left: 2%; /* Положение по горизонтали */
+top: -4.5%; /* Расположение над головой */
+}
+
+/* Адаптивность */
+@media (max-width: 1316px) {
+.banner-area-two .svg-icon {
+width: 12%;
+max-width: 110px;
+left: 2.5%;
+top: -2.5%;
+}
+.banner-area-two .main-img {
+width: 100%;
+max-width: 100%;
+height: auto;
+transform: scale(1.2) translateX(-5%);
+}
+.banner__content-two .title {
+font-size: 2.8rem; /* Еще меньше на средних экранах */
+}
+}
+@media (max-width: 1282px) {
+.banner-area-two .svg-icon {
+width: 12%;
+max-width: 110px;
+left: 2.5%;
+top: -2.5%;
+}
+.banner-area-two .main-img {
+width: 100%;
+max-width: 100%;
+height: auto;
+transform: scale(1.2) translateX(-5%);
+}
+.banner__content-two .title {
+font-size: 2.7rem; /* Еще меньше на средних экранах */
+}
+}
+@media (max-width: 1238px) {
+.banner-area-two .svg-icon {
+width: 12%;
+max-width: 110px;
+left: 2.5%;
+top: -2.5%;
+}
+.banner-area-two .main-img {
+width: 100%;
+max-width: 100%;
+height: auto;
+transform: scale(1.2) translateX(-5%);
+}
+.banner__content-two .title {
+font-size: 2.6rem; /* Еще меньше на средних экранах */
+}
+}
+
+
+@media (max-width: 1199px) {
+.banner-area-two .svg-icon {
+width: 10%;
+max-width: 40px;
+left: -5%;
+top: -2%;
+}
+.tg-header__top {
+display: none;
+}
+.banner-area-two .main-img {
+width: 150%;
+max-width: 125%;
+height: auto;
+transform: scale(1.2) translateX(-12%);
+}
+.banner__content-two .title {
+font-size: 2.2rem; /* Еще меньше на средних экранах */
+}
+}
+
+@media (max-width: 768px) {
+.banner-area-two .svg-icon {
+width: 6%;
+max-width: 80px;
+left: 10%;
+top: -2%;
+}
+.banner-area-two .main-img {
+width: 100%;
+max-width: 100%;
+height: auto;
+transform: scale(1.2) translateX(0);
+}
+}
+
+@media (max-width: 480px) {
+.banner-area-two .svg-icon {
+width: 6%;
+max-width: 80px;
+left: 10%;
+top: -5%;
+}
+}
+</style>
+
+
+        <div class="brand-area brand-area-two">
+            <div class="container-fluid">
+                <div class="marquee_mode">
+                    <div class="brand__item">
+                        <a href="https://zypl.ai/"><img src="../assets/img/brand/brand01.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="https://www.tajrupt.org/"><img src="../assets/img/brand/brand02.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="https://aic.tj/en"><img src="../assets/img/brand/brand03.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="#"><img src="../assets/img/brand/brand04.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="https://zypl.ai/"><img src="../assets/img/brand/brand01.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="https://www.tajrupt.org/"><img src="../assets/img/brand/brand02.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="https://aic.tj/en"><img src="../assets/img/brand/brand03.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                    <div class="brand__item">
+                        <a href="#"><img src="../assets/img/brand/brand04.png" alt="brand"></a>
+                        <img src="../assets/img/icons/icon.png" width="35px" alt="star">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--brand-area-end -->
+
+        <!-- features-area -->
+<section class="features__area-two section-pt-120 section-pb-90">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="section__title text-center mb-40">
+                    <span class="sub-title">Our Features</span>
+                    <h2 style="text-transform: none;" class="title">Achieve Your <br> Goals with AI Academy</h2>
+                    <p>We offer unique courses that will help you<br> master artificial intelligence and become an expert <br> in future technologies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="features__item-wrap">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="features__item-two flex-fill">
+                        <div class="features__content-two">
+                            <div class="content-top">
+                                <div class="features__icon-two">
+                                    <img src="../assets/img/icons/h20.png" width="48%" alt="img" class="injectable">
+                                </div>
+                                <h2 class="title">Expert Mentors</h2>
+                            </div>
+                            <p style="text-transform: none;">Our instructors are experts in AI and technology, ready to share their knowledge and experience for your success.</p>
+                        </div>
+                        <div class="features__item-shape">
+                            <img src="../assets/img/others/features_item_shape.svg" alt="img" class="injectable">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="features__item-two flex-fill">
+                        <div class="features__content-two">
+                            <div class="content-top">
+                                <div class="features__icon-two">
+                                    <img src="../assets/img/icons/h21.png" width="48%" alt="img" class="injectable">
+                                </div>
+                                <h2 class="title">Effective Courses</h2>
+                            </div>
+                            <p style="text-transform: none;">We provide courses that include both theoretical and practical materials, allowing you to immediately apply the knowledge gained.</p>
+                        </div>
+                        <div class="features__item-shape">
+                            <img src="../assets/img/others/features_item_shape.svg" alt="img" class="injectable">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex">
+                    <div class="features__item-two flex-fill">
+                        <div class="features__content-two">
+                            <div class="content-top">
+                                <div class="features__icon-two">
+                                    <img src="../assets/img/icons/h22.png" width="48%" alt="img" class="injectable">
+                                </div>
+                                <h2 class="title">Earn a Certificate</h2>
+                            </div>
+                            <p style="text-transform: none;">Upon completing the course, you will receive a certificate that validates your knowledge and opens doors to career opportunities.</p>
+                        </div>
+                        <div class="features__item-shape">
+                            <img src="../assets/img/others/features_item_shape.svg" alt="img" class="injectable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- features-area-end -->
+
+        <!-- about-area -->
+<section class="about-area-two tg-motion-effects section-pb-120" id="faq">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6">
+                <div class="faq__img-wrap tg-svg">
+                    <div class="faq__round-text">
+                        <div class="curved-circle">
+                            * AI  * Education * Can  * Change  * The World *
+                        </div>
+                    </div>
+                    <div class="faq__img faq__img-two">
+                        <img src="../assets/img/others/faq_img.png" width="95%" alt="img">
+                        <div class="shape-one">
+                            <img src="../assets/img/others/faq_shape01.svg"  class="injectable tg-motion-effects4" alt="img">
+                        </div>
+                        <div class="shape-two"> 
+                            <span class="svg-icon" id="faq-two-svg" data-svg-icon="../assets/img/others/faq_shape02.svg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about__content">
+                    <div class="section__title">
+                        <span class="sub-title">About Us</span>
+                        <h2 class="title" style="text-transform: none;">
+                            What Makes Us <br> the Best Academy?
+                        </h2>
+                    </div>
+                    <p class="desc">
+                        AI Academy is a leading educational institution specializing in artificial intelligence and data analytics training.
+                    </p>
+                    <div class="faq__wrap">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        What knowledge is required for enrollment?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <small>
+                                                Course requirements depend on your level of preparation. To study successfully, you may need: <br>
+
+                                                <ul>
+                                                    <li>Basic knowledge of programming, mathematics, or analytics.</li>
+                                                    <li>Understanding of algorithms, statistics, and machine learning.</li>
+                                                </ul>
+                                                 Detailed requirements for each course are available on its page.
+                                            </small>   
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                        How are AI Academy classes conducted?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <small>Offline and online lectures with practical sessions. Homework and projects for reinforcement. 
+                                                Mentor support at all learning stages. Final project demonstrating acquired skills.</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                                                                    <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                    How do I earn a certificate?
+                                                </button>
+                                            </h2>
+                                            <div id="collapse3" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        <small>To successfully complete the course and earn a certificate, you must: <br>
+                                                            Complete all assignments. Submit a final project and pass the exam. 
+                                                            Achieve the required minimum score.</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                    <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                                    How to apply for a course?
+                                                </button>
+                                            </h2>
+                                            <div id="collapse4" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        <small>
+<ol>
+    <li>Find a suitable course and register.</li>
+    <li>Pass the entrance test and interview.</li>
+    <li>Receive confirmation for enrollment.</li>
+    <li>Start your journey into the world of technology!</li> 
+</ol>
+</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse4">
+                                                    How long does the training last?
+                                                </button>
+                                            </h2>
+                                            <div id="collapse5" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        <small>The duration depends on the chosen course and ranges from 2 to 6 months.</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse4">
+                                                    Are there mentors and support?
+                                                </button>
+                                            </h2>
+                                            <div id="collapse6" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        <small>Yes! Every student has access to mentors and the community, where they can get help and share experiences.</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tg-button-wrap">
+                                            <a href="about.html" class="btn arrow-btn" style="text-transform: none;">About Us <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                                        </div>
+                                                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-area-end -->
+         <style>
+            .faq__img .shape-one{
+                position: absolute;
+                left: 12%;
+                top: 11%;
+                z-index: -1;
+            }
+            .faq__img .shape-two{
+                width: 61px;
+                height: 46px;
+                position: absolute;
+                right: 38%;
+                top: 10%;
+            }
+         </style>
+
+        <!-- course-area -->
+        <section class="courses-area section-py-120" data-background="../assets/img/bg/courses_bg.jpg" id="courses">
+            <div class="container">
+                <div class="section__title-wrap">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="section__title text-center mb-40">
+                                <span class="sub-title">Top Courses</span>
+<h2 class="title" style="text-transform: none;">Explore the Best Courses in the World with AI Academy</h2>
+<p class="desc">We offer courses that help you master in-demand skills in artificial intelligence and technology. 
+    Our courses include all necessary materials for deep learning and professional skill development.</p>
+</div>
+<div class="courses__nav">
+    <ul class="nav nav-tabs" id="courseTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button"
+                role="tab" aria-controls="all-tab-pane" aria-selected="true">
+                All Courses
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button"
+                role="tab" aria-controls="design-tab-pane" aria-selected="false">
+                Main Courses
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business-tab-pane" type="button"
+                role="tab" aria-controls="business-tab-pane" aria-selected="false">
+                Corporate Courses
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="development-tab" data-bs-toggle="tab" data-bs-target="#development-tab-pane" type="button"
+                role="tab" aria-controls="development-tab-pane" aria-selected="false">
+                Additional Courses
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="courseTabContent">
+                    <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                        <div class="swiper courses-swiper-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-basiccourse.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/basiccourse.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-basiccourse.html">Basic Course</a></h5>
+                                            <!--<div class="courses__item-content-bottom">
+                                                <div class="author-two">
+                                                    <a href="#"><img src="../assets/img/courses/course_author001.png" alt="img">AI Academy</a>
+                                                </div>
+                                                <div class="avg-rating">
+                                                    <i class="fas fa-star"></i> (4.5 Отзыв)
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>15 lessons</li>
+                                                <li><i class="flaticon-clock"></i>5 weeks</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dataanalyst.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dataanalyst.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dataanalyst.html">Data Analyst</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>48 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dsjunior.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dsjunior.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>550 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dsjunior.html">Data Scientist Junior<a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>48 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dsadvanced.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dsadvanced.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>600 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dsadvanced.html">Data Scientist Advanced</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>32 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-mlops.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/mlops.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>700 somoni<br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-mlops.html">MLOps</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>12 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1 month</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dabasics.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dabasics.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dabasics.html">Data Analytics Basics</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>24 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-daadvanced.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/daadvanced.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>750 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-daadvanced.html">Data Analytics Advanced</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>18 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1,5 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-aipm.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/aipm.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>700 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-aipm.html">AI Product Manager</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>16 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-math4ds.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/math4ds.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni <br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-math4ds.html">Math for Data Science</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>16 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-gptpe.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/gptpe.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Online</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni <br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-gptpe.html">GPT Promt Engineer</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>8 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1 month</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                        <div class="swiper courses-swiper-active">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dataanalyst.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dataanalyst.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dataanalyst.html">Data Analyst</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>48 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dsjunior.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dsjunior.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>550 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dsjunior.html">Data Scientist Junior<a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>48 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dsadvanced.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dsadvanced.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>600 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dsadvanced.html">Data Scientist Advanced</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>32 lessons</li>
+                                                <li><i class="flaticon-clock"></i>4 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-mlops.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/mlops.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>700 somoni<br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-mlops.html">MLOps</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>12 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1 month</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="business-tab-pane" role="tabpanel" aria-labelledby="business-tab" tabindex="0">
+                        <div class="swiper courses-swiper-active">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-dabasics.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/dabasics.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-dabasics.html">Data Analytics Basics</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>24 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-daadvanced.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/daadvanced.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>750 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-daadvanced.html">Data Analytics Advanced</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>18 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1,5 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-gptpe.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/gptpe.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Online</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni <br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-gptpe.html">GPT Promt Engineer</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>8 lessons</li>
+                                                <li><i class="flaticon-clock"></i>1 month</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="development-tab-pane" role="tabpanel" aria-labelledby="development-tab" tabindex="0">
+                        <div class="swiper courses-swiper-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-basiccourse.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/basiccourse.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni<br>for course</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-basiccourse.html">Basic Course</a></h5>
+                                            <!--<div class="courses__item-content-bottom">
+                                                <div class="author-two">
+                                                    <a href="#"><img src="../assets/img/courses/course_author001.png" alt="img">AI Academy</a>
+                                                </div>
+                                                <div class="avg-rating">
+                                                    <i class="fas fa-star"></i> (4.5 Отзыв)
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>15 lessons</li>
+                                                <li><i class="flaticon-clock"></i>5 weeks</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-aipm.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/aipm.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe</small></a>
+                                                </li>
+                                                <li class="price"><small>700 somoni<br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-aipm.html">AI Product Manager</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>16 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="courses__item courses__item-two shine__animate-item">
+                                        <div class="courses__item-thumb courses__item-thumb-two">
+                                            <a href="courses-math4ds.html" class="shine__animate-link">
+                                                <img src="../assets/img/courses/coursesSmallThumb/math4ds.png" alt="img">
+                                            </a>
+                                        </div>
+                                        <div class="courses__item-content courses__item-content-two" style="margin-bottom: 0px; padding-bottom: 0px;">
+                                            <ul class="courses__item-meta list-wrap">
+                                                <li class="courses__item-tag">
+                                                    <a href="courses.html"><small>Dushanbe / Khujand</small></a>
+                                                </li>
+                                                <li class="price"><small>500 somoni <br>per month</small></li>
+                                            </ul>
+                                            <h5 class="title"><a href="courses-math4ds.html">Math for Data Science</a></h5>
+                                            
+                                        </div>
+                                        <div class="courses__item-bottom-two">
+                                            <ul class="list-wrap">
+                                                <li><i class="flaticon-book"></i>16 lessons</li>
+                                                <li><i class="flaticon-clock"></i>2 months</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-courses-btn mt-30">
+                    <div class="tg-button-wrap justify-content-center">
+                        <a href="courses.html" style="text-transform: none; margin-bottom: 5%;" class="btn arrow-btn">All courses <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- course-area-end -->
+<br><br>
+        <!-- work-area
+        <section class="work__area section-py-120" id="bootcamp" style="margin-bottom: 150px;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-9">
+                        <div class="about__images work__images">
+                            <img src="../assets/img/others/about_img.png" alt="img" class="main-img">
+                            <img src="../assets/img/others/about_shape.svg" alt="img" class="shape alltuchtopdown">
+                            <a href="https://www.youtube.com/watch?v=b2Az7_lLh3g" class="popup-video">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">
+                                    <path d="M0.19043 26.3132V1.69421C0.190288 1.40603 0.245303 1.12259 0.350273 0.870694C0.455242 0.6188 0.606687 0.406797 0.79027 0.254768C0.973854 0.10274 1.1835 0.0157243 1.39936 0.00193865C1.61521 -0.011847 1.83014 0.0480663 2.02378 0.176003L20.4856 12.3292C20.6973 12.4694 20.8754 12.6856 20.9999 12.9535C21.1245 13.2214 21.1904 13.5304 21.1904 13.8456C21.1904 14.1608 21.1245 14.4697 20.9999 14.7376C20.8754 15.0055 20.6973 15.2217 20.4856 15.3619L2.02378 27.824C1.83056 27.9517 1.61615 28.0116 1.40076 27.9981C1.18536 27.9847 0.97607 27.8983 0.792638 27.7472C0.609205 27.596 0.457661 27.385 0.352299 27.1342C0.246938 26.8833 0.191236 26.6008 0.19043 26.3132Z" fill="currentcolor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="work__content">
+                            <div class="section__title mb-20">
+                                <span class="sub-title">AI Bootcamp</span>
+                                <h2 class="title" style="text-transform: none;">Присоединяйтесь к AI Bootcamp и станьте специалистом в ML</h2>
+                            </div>
+                            <p>Примите участие в интенсивной программе AI Bootcamp, разработанной для Backend-разработчиков, желающих перейти в сферу машинного обучения. Это отличная возможность освоить ключевые технологии и применить знания на практике.</p>
+                            <div class="work__list-wrap">
+                                <div class="work__list-box">
+                                    <div class="work__list-box-top">
+                                        <div class="icon">
+                                            <img src="../assets/img/icons/h23.png" width="48%" alt="img" class="injectable">
+                                        </div>
+                                        <h4 class="title">Реальные проекты</h4>
+                                    </div>
+                                    <p>Вы будете работать над практическими задачами и решать реальные бизнес-проблемы.</p>
+                                </div>
+                                <div class="work__list-box">
+                                    <div class="work__list-box-top">
+                                        <div class="icon">
+                                            <img src="../assets/img/icons/h24.png" width="48%" alt="img" class="injectable">
+                                        </div>
+                                        <h4 class="title">Командная работа</h4>
+                                    </div>
+                                    <p>Работайте в команде с опытными специалистами и получайте поддержку от экспертов AI.</p>
+                                </div>
+                            </div>
+                            <style>.work__list-wrap {
+                                display: flex;
+                                gap: 20px; /* Отступы между элементами */
+                                align-items: stretch; /* Растягивает элементы по высоте */
+                            }
+                            
+                            .work__list-box {
+                                flex: 1; /* Равномерное распределение */
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between; /* Раздвигаем элементы внутри */
+                                padding: 20px;
+                            }
+                            </style>
+                            <div class="tg-button-wrap">
+                                <a href="bootcamp.html" class="btn arrow-btn" style="text-transform: none;">Про AI Bootcamp <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         work-area-end -->
+
+
+        
+
+        <!-- instructor-area -->
+        <section class="instructor__area-three instructor__bg" data-background="../assets/img/bg/instructor_bg.jpg" style="padding-top: 100px;" id="testimonials">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section__title text-center mb-40">
+                            <span class="sub-title">Student Reviews</span>
+                            <h2 class="title">About AI Academy </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="swiper-container instructor-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/rumayza.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Norova Rumayza</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>From the Basic course to graduating from AI Academy – my journey was incredibly valuable.
+                                                By mastering the program up to MLOps, I gained a comprehensive understanding of AI systems.
+                                                Today, I work as an AI instructor in pilot schools, where I apply not only the acquired knowledge but also the academy’s methodology.
+                                                The practical approach and mentor support made learning truly effective.
+                                                Grateful for the opportunity for professional growth!</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/aziz.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Rasulov Aziz</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>I took this course with great enthusiasm. Yes, at first it was difficult, but that only strengthened my interest and motivation.
+                                                The materials were well-structured, and the instructors were true professionals, always ready to help.
+                                                I am grateful to the Academy for the opportunities and knowledge that I have successfully applied in practice.
+                                                Thanks to the Academy and the <b><a href="https://zypl.ai/">zypl.ai</a></b> lab for the valuable experience and support.</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/yasmina.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Hasanova Yasmina</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>I completed this course in 4 months and was very satisfied. 
+                                                The material is presented in a structured and accessible way, covering everything from Python Basics and statistics to key machine learning concepts. 
+                                                Theory is accompanied by practical tasks, which help in better understanding. 
+                                
+                                                During my studies, I significantly expanded my knowledge in programming and data analysis. 
+                                                I highly recommend it to anyone looking to master basic Data Science and ML skills!</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/voris.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Davlatzoda Voris</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>AI Academy courses are the only accessible opportunity to learn Data Science in Tajikistan. 
+                                                They completely changed my perception of AI and prepared me from scratch. 
+                                                The materials are well-structured, and the instructors are professionals who support students and share valuable insights. 
+                                                The courses are intensive and require effort, but it's worth it – after completing the program, I secured an internship and a job at <b><a href="https://zypl.ai/">zypl.ai</a></b>.</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/alexandra.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Alexandra Leshukovich</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>I completed the Basic ML and Data Analytics courses at <b><a href="https://zypl.ai/">zypl.ai</a></b> and continue studying Data Science. 
+                                                I gained valuable knowledge and practical skills in data analysis and ML. 
+                                
+                                                The instructors are professionals, the material is presented clearly, and the final projects help in applying knowledge in practice. 
+                                
+                                                After the course, I confidently work with models and data analysis. 
+                                                <b><a href="https://zypl.ai/">zypl.ai</a></b> is a great opportunity to grow in Data Science! I highly recommend it!</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="instructor__item-three">
+                                        <div class="instructor__thumb-three">
+                                            <img src="../assets/img/instructor/azizab.png" alt="img">
+                                            <div class="shape-one">
+                                                <img src="../assets/img/instructor/h2_instructor_img_shape01.svg" alt="img" class="injectable">
+                                            </div>
+                                        </div>
+                                        <div class="instructor__content-three">
+                                            <!--<div class="ratting-wrap">
+                                                <div class="ratting">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span>(4.8 Ratings)</span>
+                                            </div>-->
+                                            <h2 class="title">Aziz Abdullaev</h2>
+                                            <span class="designation">Student</span>
+                                            <p><small>I completed the Data Analytics course and was very satisfied. 
+                                                All key topics were covered: Python, SQL, statistics, visualization. 
+                                                A lot of hands-on practice and a clear approach without unnecessary theory. 
+                                
+                                                What I liked the most:
+                                                - Real-world cases and tasks 
+                                                - Instructor support 
+                                                - Useful materials and projects  
+                                
+                                                After the course, I feel much more confident in data analytics. 
+                                                A great start for beginners! Highly recommend!</small></p>
+                                            <!--<div class="instructor__social">
+                                                <ul class="list-wrap">
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-9">
+                        <div class="instructor-slider-dot">
+                            <div class="swiper instructor-nav">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/rumayza02.png" alt="img"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/aziz02.png" alt="img"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/yasmina02.png" alt="img"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/voris02.png" alt="img"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/alexandra02.png" alt="img"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="../assets/img/instructor/azizab02.png" alt="img"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="instructor__nav-two">
+                                <div class="instructor-button-prev"><i class="flaticon-arrow-right"></i></div>
+                                <div class="instructor-button-next"><i class="flaticon-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="instructor__shape">
+                <img src="../assets/img/instructor/h2_instructor_shape.png" alt="img" class="alltuchtopdown">
+            </div>
+        </section>
+        <!-- instructor-area-end -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let swiper = new Swiper(".instructor-active", {
+                    loop: true, // Зацикливание
+                    slidesPerView: 1, // Показывать 1 отзыв за раз
+                    navigation: {
+                        nextEl: ".instructor-button-next",
+                        prevEl: ".instructor-button-prev"
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    }
+                });
+            
+                // Синхронизация основного Swiper с миниатюрами
+                swiperNav.on('click', function (swiperNav) {
+                    swiper.slideTo(swiperNav.clickedIndex);
+                });
+            });
+            </script>
+            
+        
+
+            
+
+        <!-- newsletter-area -->
+<section class="newsletter__area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="newsletter__img-wrap">
+                    <img src="../assets/img/others/newsletter_img.png" alt="img">
+                    <img src="../assets/img/others/newsletter_shape01.png" alt="img" data-aos="fade-up" data-aos-delay="400">
+                    <img src="../assets/img/others/newsletter_shape02.png" alt="img" class="alltuchtopdown">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="newsletter__content">
+                    <h2 class="title" style="text-transform: none;">
+                        Want to stay<span> updated</span> on new <br> courses <span>and updates?</span>
+                    </h2>
+                    <div class="newsletter__form">
+                        <form id="subscribe-form" onsubmit="event.preventDefault(); sendEmail();">
+                            <input type="email" id="email-input" placeholder="Enter your email" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="newsletter__shape">
+        <img src="../assets/img/others/newsletter_shape03.png" alt="img" data-aos="fade-left" data-aos-delay="400">
+    </div>
+</section>
+<!-- newsletter-area-end -->
+<!-- Уведомления -->
+<div id="notification" class="notification hidden"></div>
+
+<style>
+    /* Стили уведомлений */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1E293B; /* Темно-синий фон */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    max-width: 300px; /* Ограничение ширины */
+    word-wrap: break-word;
+}
+
+/* Анимация появления */
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Цвета для разных типов сообщений */
+.notification.success {
+    background-color: #10B981; /* Зеленый */
+}
+
+.notification.error {
+    background-color: #EF4444; /* Красный */
+}
+
+.notification.hidden {
+    display: none;
+}
+
+/* 📌 Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .notification {
+        bottom: 10px; /* Уменьшаем отступ снизу */
+        right: 10px; /* Уменьшаем отступ справа */
+        font-size: 14px; /* Делаем шрифт меньше */
+        padding: 10px 15px;
+        max-width: 90%; /* Уведомления теперь на всю ширину экрана */
+    }
+}
+
+</style>
+<script>
+    function sendEmail() {
+        let emailInput = document.getElementById("email-input");
+        let email = emailInput.value.trim();
+    
+        if (email) {
+            let script = document.createElement("script");
+            script.src = `https://script.google.com/macros/s/AKfycbxHBTe5CgjKq5soNSWACX_HRMRVLfK5WTsJ4S8ESv_i3JgFiK6e8sr7p_XLzc86byem/exec?callback=handleResponse&email=${encodeURIComponent(email)}`;
+            document.body.appendChild(script);
+        } else {
+            showNotification("Enter your email!", "error");
+        }
+    }
+    
+    // Функция обработки ответа
+    function handleResponse(response) {
+        if (response.status === "success") {
+            showNotification("You are successfully subscribed!", "success");
+            document.getElementById("email-input").value = "";
+        } else {
+            showNotification(response.message, "error");
+        }
+    }
+    
+    // Функция уведомлений
+    function showNotification(message, type) {
+        let notification = document.getElementById("notification");
+        notification.textContent = message;
+        notification.className = `notification show ${type}`;
+        setTimeout(() => {
+            notification.className = `notification hidden`;
+        }, 3000);
+    }
+    </script>
+        
+        <!-- event-area -->
+<section class="event__area section-pt-120 section-pb-90" id="schedule">
+    <div class="container">
+        <div class="event__inner-wrap">
+            <div class="row">
+                <div class="col-30">
+                    <div class="event__content">
+                        <div class="section__title mb-20">
+                            <span class="sub-title">Upcoming Courses</span>
+                            <h2 class="title" style="text-transform: none;">Join our <br>community and enhance your skills</h2>
+                        </div>
+                        <p>Discover new courses that will help you deepen your knowledge in artificial intelligence and technology.</p>
+                        <div class="tg-button-wrap">
+                            <a href="schedule.html" style="text-transform: none;" class="btn arrow-btn">Upcoming Courses <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-70">
+                    <div class="event__item-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="event__item shine__animate-item">
+                                    <div class="event__item-thumb">
+                                        <a href="courses-gptpe.html" class="shine__animate-link"><img src="../assets/img/courses/coursesBigThumb/gptpe.png" alt="img"></a>
+                                    </div>
+                                    <div class="event__item-content">
+                                        <span class="date">March 3, 2025</span>
+                                        <h2 class="title"><a href="courses-gptpe.html">GPT Prompt Engineer</a></h2>
+                                        <a href="courses-gptpe.html" class="location" target="_blank"><i class="flaticon-map"></i>Online</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="event__item shine__animate-item">
+                                    <div class="event__item-thumb">
+                                        <a href="courses-dabasics.html" class="shine__animate-link"><img src="../assets/img/courses/coursesBigThumb/dabasics.png" alt="img"></a>
+                                    </div>
+                                    <div class="event__item-content">
+                                        <span class="date">March 4, 2025</span>
+                                        <h2 class="title"><a href="courses-dabasics.html">Data Analytics Basics</a></h2>
+                                        <a href="courses-dabasics.html" class="location" target="_blank"><i class="flaticon-map"></i>Dushanbe</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="event__item shine__animate-item">
+                                    <div class="event__item-thumb">
+                                        <a href="courses-dataanalyst.html" class="shine__animate-link"><img src="../assets/img/courses/coursesBigThumb/dataanalyst.png" alt="img"></a>
+                                    </div>
+                                    <div class="event__item-content">
+                                        <span class="date">March 20, 2025</span>
+                                        <h2 class="title"><a href="courses-dataanalyst.html">Data Analyst</a></h2>
+                                        <a href="courses-dataanalyst.html" class="location" target="_blank"><i class="flaticon-map"></i>Dushanbe</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event__shape">
+        <img src="../assets/img/events/event_shape.png" alt="img" class="alltuchtopdown">
+    </div>
+</section>
+<!-- event-area-end -->
+
+        
+        <!-- blog-area -->
+<section class="blog__post-area blog__post-area-two">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section__title text-center mb-40">
+                    <span class="sub-title">News & Blogs</span>
+                    <h2 class="title" style="text-transform: none;">Our Latest News</h2>
+                    <p>Stay updated with the latest news from AI Academy! We share relevant information about new courses, events, as well as useful articles and updates to keep you informed about the latest trends in technology and AI.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gutter-20">
+            <div class="col-xl-3 col-md-6">
+                <div class="blog__post-item shine__animate-item">
+                    <div class="blog__post-thumb">
+                        <a href="./blog/ddh-hackathon.html" class="shine__animate-link"><img src="../assets/img/blog/ddh-hackathon.jpg" alt="img"></a>
+                    </div>
+                    <div class="blog__post-content">
+                        <div class="blog__post-meta">
+                            <ul class="list-wrap">
+                                <li><i class="flaticon-calendar"></i>29/04/2024</li>
+                                <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="title"><a href="./blog/ddh-hackathon.html">Completion of the "Disruptive DataHack"...</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="blog__post-item shine__animate-item">
+                    <div class="blog__post-thumb">
+                        <a href="./blog/first-ai-academytj.html" class="shine__animate-link"><img src="../assets/img/blog/first-ai-academytj.jpg" alt="img"></a>
+                    </div>
+                    <div class="blog__post-content">
+                        <div class="blog__post-meta">
+                            <ul class="list-wrap">
+                                <li><i class="flaticon-calendar"></i>03/09/2024</li>
+                                <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="title"><a href="./blog/first-ai-academytj.html">The First AI Academy in Tajikistan...</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="blog__post-item shine__animate-item">
+                    <div class="blog__post-thumb">
+                        <a href="./blog/ict2024-aiacademy.html" class="shine__animate-link"><img src="../assets/img/blog/ict2024-aiacademy.jpg" alt="img"></a>
+                    </div>
+                    <div class="blog__post-content">
+                        <div class="blog__post-meta">
+                            <ul class="list-wrap">
+                                <li><i class="flaticon-calendar"></i>20/07/2024</li>
+                                <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="title"><a href="./blog/ict2024-aiacademy.html">Participation in ICT - WEEK Dushanbe 2024</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="blog__post-item shine__animate-item">
+                    <div class="blog__post-thumb">
+                        <a href="./blog/aiacademy-techwomen.html" class="shine__animate-link"><img src="../assets/img/blog/aiacademy-techwomen.jpg" alt="img"></a>
+                    </div>
+                    <div class="blog__post-content">
+                        <div class="blog__post-meta">
+                            <ul class="list-wrap">
+                                <li><i class="flaticon-calendar"></i>26/04/2024</li>
+                                <li><i class="flaticon-user-1"></i><a href="#">AI Academy</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="title"><a href="./blog/aiacademy-techwomen.html">TechWomen & AI Academy: Inspiring</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-courses-btn mt-30">
+            <div class="tg-button-wrap justify-content-center">
+                <a href="blog.html" style="text-transform: none; margin-bottom: 5%;" class="btn arrow-btn">All news <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog-area-end -->
+
+<style>
+
+
+/* Контейнер, который тянет содержимое вниз */
+.blog__post-content {
+    flex-grow: 1; /* Растягивает содержимое до конца блока */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Выравнивание картинок по размеру */
+.blog__post-thumb img {
+    width: 100%; /* Заполняет ширину блока */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Обрезает изображение пропорционально */
+}
+
+/* Делаем высоту заголовков одинаковой */
+.blog__post-content h4 {
+    min-height: 60px; /* Задаём минимальную высоту */
+    display: flex;
+}
+
+</style>
+        <!-- instructor-area-two -->
+<section class="instructor__area-four">
+    <div class="container">
+        <div class="instructor__item-wrap-two">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="instructor__item-two tg-svg">
+                        <div class="instructor__thumb-two">
+                            <img src="../assets/img/instructor/instructor_two01.png" alt="img">
+                            <div class="shape-one">
+                                <img src="../assets/img/instructor/instructor_shape01.svg" alt="img" class="injectable">
+                            </div>
+                            <div class="shape-two">
+                                <span class="svg-icon" id="instructor-svg" data-svg-icon="../assets/img/instructor/instructor_shape02.svg"></span>
+                            </div>
+                        </div>
+                        <div class="instructor__content-two">
+                            <h3 class="title"><a href="contact.html">Become an Instructor</a></h3>
+                            <p>Want to share your<br> knowledge and experience?</p>
+                            <div class="tg-button-wrap">
+                                <a href="contact.html" class="btn arrow-btn">Apply Now <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="instructor__item-two tg-svg">
+                        <div class="instructor__thumb-two">
+                            <img src="../assets/img/instructor/instructor_two02.png" alt="img">
+                            <div class="shape-one">
+                                <img src="../assets/img/instructor/instructor_shape01.svg" alt="img" class="injectable">
+                            </div>
+                            <div class="shape-two">
+                                <span class="svg-icon" id="instructor-svg-two" data-svg-icon="../assets/img/instructor/instructor_shape02.svg"></span>
+                            </div>
+                        </div>
+                        <div class="instructor__content-two">
+                            <h3 class="title"><a href="contact.html">Become a Student</a></h3>
+                            <p>Join the students of <br>Artificial Intelligence Academy.</p>
+                            <div class="tg-button-wrap">
+                                <a href="http://taplink.cc/aic.tj" class="btn arrow-btn">Apply Now <img src="../assets/img/icons/right_arrow.svg" alt="img" class="injectable"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- instructor-area-two-end -->
+
+<style>
+        .instructor__item-wrap-two > .row > div:last-child .instructor__thumb-two img {
+    max-width: 115% !important; /* Делаем изображение больше */
+    height: auto;
+    transform: translateX(-10%) !important; /* Смещаем левее */
+}
+
+/* Убираем обрезку */
+.instructor__item-wrap-two > .row > div:last-child .instructor__thumb-two {
+    overflow: visible !important;
+}
+
+/* Декоративные формы */
+.instructor__item-wrap-two > .row > div:last-child .shape-two {
+    position: absolute;
+    z-index: -1;
+    right: -5%;
+    bottom: 5%;
+}
+
+/* 🔹 Исправляем отображение на 1024px */
+@media (max-width: 1024px) {
+    .instructor__item-wrap-two > .row > div:last-child .instructor__thumb-two img {
+        max-width: 110% !important; /* Делаем немного меньше */
+        transform: translateX(-7%) !important; /* Смещаем левее */
+    }
+}
+
+/* 🔹 Исправляем отображение на 768px */
+@media (max-width: 768px) {
+    .instructor__item-wrap-two > .row > div:last-child {
+        text-align: left; /* Оставляем текст левее */
+    }
+    .instructor__item-wrap-two > .row > div:last-child .instructor__thumb-two img {
+        max-width: 100% !important; /* Делаем на всю ширину */
+        transform: translateX(-3%) !important; /* Чуть смещаем */
+    }
+    .instructor__item-wrap-two > .row > div:last-child .shape-one {
+        left: 0;
+    }
+    .instructor__item-wrap-two > .row > div:last-child .shape-two {
+        right: 0;
+    }
+}
+
+            </style>
+    </main>
+    <!-- main-area-end -->
+
+
+
+    <!-- footer-area -->
+<footer class="footer__area footer__area-two">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer__widget">
+                        <div class="logo mb-35">
+                            <a href="index.html"><img src="../assets/img/logo/secondary_logo.png" width="50%" alt="img"></a>
+                        </div>
+                        <div class="footer__content">
+                            <p>AI Academy strives to become the leading center for education and research in artificial intelligence in Tajikistan.</p>
+                            <ul class="list-wrap">
+                                <li>21 Sh. Shotemur Street, <b>Dushanbe</b></li>
+                                <li>+992 99 555 00 32</li>
+                                <li>1A Tiroz Street, <b>Khujand</b></li>
+                                <li>+992 92 848 90 10</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Useful Links</h4>
+                        <div class="footer__link">
+                            <ul class="list-wrap">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="courses.html">Courses</a></li>
+                                <li><a href="blog.html">News</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Our Academy</h4>
+                        <div class="footer__link">
+                            <ul class="list-wrap">
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="schedule.html">Upcoming Courses</a></li>
+                                <li><a href="#testimonials">Reviews</a></li>
+                                <li><a href="../index.html"><small><b>Русский</b></small></a></li>
+                                <li><a href="../tj/index.html"><small><b>Тоҷикӣ</b></small></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="footer__widget">
+                        <h4 class="footer__widget-title">Stay Connected</h4>
+                        <div class="footer__contact-content">
+                            <p>If you need assistance, you can find information about us on social media or send us an email.</p>
+                            <ul class="list-wrap footer__social">
+                                <li><a href="https://www.instagram.com/aiacademy.tj"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61571167420750"><i class="fab fa-facebook-f"></i></a></li>
+                                <!--<li><a href="https://www.youtube.com/@zypl_ai"><i class="fab fa-youtube"></i></a></li>-->
+                                <li><a href="https://www.linkedin.com/company/aiacademytj/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://t.me/aiacademytj"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="app-download">
+                            <a href="#"><img src="../assets/img/others/google-play.svg" alt="img"></a>
+                            <a href="#"><img src="../assets/img/others/apple-store.svg" alt="img"></a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="copy-right-text">
+                        <p>© AI Academy - 2025. All rights reserved!</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="footer__bottom-menu">
+                        <ul class="list-wrap">
+                            <li>Developed by<a href="#"> samizoda' Incorporated</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-area-end -->
+
+
+
+
+    <!-- JS here -->
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/jquery.odometer.min.js"></script>
+    <script src="../assets/js/jquery.appear.js"></script>
+    <script src="../assets/js/tween-max.min.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/jquery.marquee.min.js"></script>
+    <script src="../assets/js/tg-cursor.min.js"></script>
+    <script src="../assets/js/vivus.min.js"></script>
+    <script src="../assets/js/ajax-form.js"></script>
+    <script src="../assets/js/svg-inject.min.js"></script>
+    <script src="../assets/js/jquery.circleType.js"></script>
+    <script src="../assets/js/jquery.lettering.min.js"></script>
+    <script src="../assets/js/plyr.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        SVGInject(document.querySelectorAll("img.injectable"));
+    </script>
+    
+</body>
+
+</html>
